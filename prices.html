@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Planes y precios en Diseño web, Redes sociales, SEO y más - Boneluv</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/4e63b47db0.js"></script>
+    <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="6b7b6bb8-754f-49ab-9544-c4a97693dcf7";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
+</head>
+<body class="allwhite">
+        <nav class="landing-nav">
+                <div class="landing-nav-logo">
+                    <img onclick="window.location='index.html'" src="https://boneluv.es/wp-content/uploads/2019/05/bonel.png" alt="Boneluv">
+                </div>
+                <div class="landing-nav-links">
+                    <span class="links">
+                        <div class="item">
+                            <a href="index.html">Inicio</a>
+                        </div>
+                        <div class="item">
+                                <a href="about.html">Sobre mí</a>
+                            </div>
+                            <div class="item">
+                                    <a href="#">Portfolio</a>
+                                </div>
+                                <div class="item">
+                                        <a href="prices.html">Planes</a>
+                                    </div>
+                                <div class="item">
+                                        <a href="#">Contacto</a>
+                                    </div>
+                    </span>
+                    <span class="buttons">
+                            <div class="item">
+                                    <a class="accent" href="#">Pide tu presupuesto</a>
+                                </div>
+                    </span>
+    
+                </div>
+            </nav>
+
+            <div ng-view="" class="animateview ng-scope" autoscroll=""><!--
+                Inspiration
+                https://dribbble.com/shots/4526859-Employer-Dashboard
+                
+                https://begin.com/
+                -->
+                <div class="landing-silhouette">
+                        <h1 class="big">Servicios</h1>
+                        <h2 class="small">Planes y precios</h2>
+                    </div>
+                <div class="page-body dashboard wait ng-scope" ng-class="{'loading-blur': !userLoaded || !isSignedIn}">
+                <div class="page-main" ng-class="{'page-transition': pageTransitioning, 'lightbox-blur': $parent.blurEverything}">
+                
+                        <!-- Page Content -->
+                        <div class="page-content">
+                
+                
+                            <!-- Resume List -->
+                            <div static-include="/pages/includes/dashboard/dashboard_resume-list.html"><!--
+                    Resume List
+                    Resume List
+                    Resume List
+                -->
+                <h1 class="section-header ng-scope">Mis servicios</h1>
+                
+                <div class="resume-container ng-scope" ng-if="userData.resumes">
+                    <section class="resume-card ng-scope" style="background-color: #5555FF;" onclick="window.location='webprices.html'">
+                        <div class="title ng-binding">
+                            Diseño web
+                        </div>
+                        <div class="subtitle ng-binding">
+                                <small>
+                                        <span>Landing page</span>
+                                            <span>•</span>
+                                            <span>Web Corporativa</span>
+                                            <span>•</span>
+                                            <span>Tienda online</span>
+                                    </small>
+                        </div>
+                
+                    </section>
+                    <section class="resume-card ng-scope" style="background-color: #8bc34a;" onclick="window.location='seoprices.html'">
+                        <div class="title ng-binding">
+                           Posicionamiento web
+                        </div>
+                        <div class="subtitle ng-binding">
+                                <small>
+                                        <span>SEO Local</span>
+                                            <span>•</span>
+                                            <span>SEO Empresa</span>
+                                            <span>•</span>
+                                            <span>SEO Ecommerce</span>
+                                    </small>
+                        </div>
+                
+                    </section>
+                    <section class="resume-card ng-scope" style="background-color: #ff4081;" onclick="window.location='socialprices.html'">
+                            <div class="title ng-binding">
+                               Redes sociales
+                            </div>
+                            <div class="subtitle ng-binding">
+                                    <small>
+                                            <span>Presencia</span>
+                                                <span>•</span>
+                                                <span>Influencia</span>
+                                                <span>•</span>
+                                                <span>Marca</span>
+                                        </small>
+                            </div>
+                    
+                        </section>
+                        <section class="resume-card ng-scope" style="background-color: #78909c;" onclick="window.location='manprices.html'">
+                                <div class="title ng-binding">
+                                   Mantenimiento
+                                </div>
+                                <div class="subtitle ng-binding">
+                                        <small>
+                                                <span>Básico</span>
+                                                    <span>•</span>
+                                                    <span>Empresa</span>
+                                                    <span>•</span>
+                                                    <span>Ecommerce</span>
+                                            </small>
+                                </div>
+                        
+                            </section>
+                    <!-- end ngRepeat: resume in resumeListArray | orderBy: '-1' -->
+                
+                
+                    <!-- Spacers to keep the same width -->
+                    <!-- ngRepeat: (key, resume) in userData.resumes --><div class="resume-spacer ng-scope" ng-repeat="(key, resume) in userData.resumes"></div><!-- end ngRepeat: (key, resume) in userData.resumes --><div class="resume-spacer ng-scope" ng-repeat="(key, resume) in userData.resumes"></div><!-- end ngRepeat: (key, resume) in userData.resumes -->
+                    <div class="resume-spacer"></div>
+                    <div class="resume-spacer"></div>
+                
+                
+                </div><!-- end ngIf: userData.resumes -->
+                
+                <!--
+                    Resume Limit Reached
+                    Resume Limit Reached
+                    Resume Limit Reached
+                -->
+                <!-- ngIf: !proUser && resumeCount >= 3 || proUser && resumeCount >= 20 -->
+                
+                
+                <!-- 
+                    No Resumes
+                    No Resumes
+                    No Resumes
+                 -->
+                 <!-- ngIf: !userData.resumes -->
+                 <footer class="landing-footer" style="padding-top: 50px">
+                        <div class="content">
+                            <div class="links">
+                                <ul>
+                                    <li>Enlaces</li>
+                                    <li><a ng-click="go('/designer')">Sobre mí</a></li>
+                                    <li><a ng-click="go('/jobs/browse')">Portfolio</a></li>
+                                    <li><a href="https://medium.com/ceev" target="_blank">Planes</a></li>
+                                </ul>
+                                <ul>
+                                    <li>Información</li>
+                                    <li><a ng-click="go('/help')">Preguntas frecuentes</a></li>
+                                    <li><a ng-click="go('/docs/privacy')">Politica de privacidad</a></li>
+                                    <li><a href="mailto:hello@ceev.io" target="_blank">info@boneluv.es</a></li>
+                                </ul>
+                                <ul>
+                                    <li>Sígueme</li>
+                                    <li><a href="https://twitter.com/ceev_io" target="_blank">Twitter</a></li>
+                                    <li><a href="https://facebook.com/ceev.io" target="_blank">Facebook</a></li>
+                                    <li><a href="https://instagram.com/ceev.io" target="_blank">Instagram</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </footer>  
+                </div>
+                
+                
+            </div>
+
+</body>
+
+</html>

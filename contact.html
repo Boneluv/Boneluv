@@ -41,86 +41,66 @@
         
                     </div>
                 </nav>
-                <div class="designer-info-page ng-scope" ng-class="{'landing-transition': pageTransitioning}">
-
-                        <div class="info-video">
-                            <div class="video-title">
-                                contacto
-                            </div>
-                            <div style="margin-top:20px;height:400px;">
-                            <h1>Solicita tu presupuesto o cuentanos tus dudas</h1>
-                            <div style="width:90%;">
-                                <h2 style="text-align: left;margin-left: 85px">Llámame</h2>
-                                <div>
-                                    <p>+34644770223</p>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="square">&nbsp;</div>
-                            <div class="circle">&nbsp;</div>
-                    
-                            <br>
-                    
-                            <button class="btn noicon big">
-                                <i class="far fa-file-plus"></i>
-                                <span>Design Your Resume</span>
+                <div class="landing-silhouette">
+                        <h1 class="big">Contacto</h1>
+                        <h2 class="small">Presupuestos y consultas</h2>
+                    </div>
+                <div class="landing-item" style="margin-bottom: 100px;">
+                    <div class="landing-content right">
+                      <div class="half">
+                            <h5>Solicita ya tu presupuesto personalizado</h5>
+                      </div>
+                      <div class="half" style="display: flex; flex-direction:column;">
+                          <div>
+                                <p style="font-size: 20px;font-weight: 600">Escribeme</p>
+                                <a href="mailto:info@boneluv.es" target="_blank"><h5 style="color: #FF187C !important;">info@boneluv.es</h5></a>
+                          </div>
+                          <div>
+                                <p style="font-size: 20px;font-weight: 600;">Llamame</p>
+                                <a href="tel:34644770223" target="_blank"><h5 style="color: #FF187C;">+34644770223</h5></a>
+                          </div>
+                     </div>  
+                    </div>
+                </div> 
+                <div class="landing-cta">
+                        <h3>Lanza tu proyecto ya</h3>
+                        <h4>Ponte en contacto conmigo y te asesoraré lo mejor posible.</h4>
+                        <div class="buttons">
+                            <button class="btn noicon" onclick="window.location='contact.html'">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Contacto</span>
+                            </button>
+                            <button class="btn noicon green" onclick="window.location='prices.html'">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Precios</span>
                             </button>
                         </div>
-                    
-                        <!-- Features -->
-                        <div class="designer-features">
-                            <div class="feature">
-                                <h5>
-                                    Stunning Templates
-                                    <i class="far fa-file-image"></i>
-                                </h5>
-                                <p>Pick a style that matches you. Ceev has many professionally-designed templates for all kinds of jobs.</p>
-                            </div>
-                            <div class="feature">
-                                <h5>
-                                    Make it personal
-                                    <i class="far fa-tint"></i>
-                                </h5>
-                                <p>Make it yours by customizing fonts, colors, and so much more.</p>
-                            </div>
-                            <div class="feature">
-                                <h5>
-                                    Matching cover letters
-                                    <i class="far fa-align-left"></i>
-                                </h5>
-                                <p>You can chose to include a cover letter with your resume — and its design will match your resume.</p>
-                            </div>
-                            <div class="feature">
-                                <h5>
-                                    Easy to use
-                                    <i class="far fa-mouse-pointer"></i>
-                                </h5>
-                                <p>Ceev is insanely simple without giving up features you need. Add your content, drag and drop to move things around, adjust font sizes and spacing, and format your text or add links.</p>
-                            </div>
-                            <div class="feature">
-                                <h5>
-                                    Access from anywhere
-                                    <i class="far fa-mobile"></i>
-                                </h5>
-                                <p>You can sign into Ceev to work on your resumes from anywhere on any device. It even works on smartphones and tablets.</p>
-                            </div>
-                            <div class="feature">
-                                <h5>
-                                    Import your LinkedIn
-                                    <i class="fab fa-linkedin"></i>
-                                </h5>
-                                <p>Save time by using what you already have - import your LinkedIn profile into the resume designer using the extension for Google Chrome.</p>
-                            </div>
-                            <div class="feature">
-                                <h5>
-                                    Simple exporting
-                                    <i class="far fa-print"></i>
-                                </h5>
-                                <p>Send your resume directly to your printer, or print to PDF to save your resume to your computer.</p>
+                    </div> 
+                    <footer class="landing-footer">
+                        <div class="content">
+                            <div class="links">
+                                <ul>
+                                    <li>Enlaces</li>
+                                    <li><a href="about.html">Sobre mí</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="prices.html">Planes</a></li>
+                                </ul>
+                                <ul>
+                                    <li>Información</li>
+                                    <li><a ng-click="go('/help')">Preguntas frecuentes</a></li>
+                                    <li><a ng-click="go('/docs/privacy')">Politica de privacidad</a></li>
+                                    <li><a href="mailto:info@boneluv.es" target="_blank">info@boneluv.es</a></li>
+                                </ul>
+                                <ul>
+                                    <li>Sígueme</li>
+                                    <li><a href="https://twitter.com/boneluvco" target="_blank">Twitter</a></li>
+                                    <li><a href="https://facebook.com/boneluvco" target="_blank">Facebook</a></li>
+                                    <li><a href="https://instagram.com/boneluvco" target="_blank">Instagram</a></li>
+                                </ul>
                             </div>
                         </div>
+                    </footer>     
                     
-                    </div>
-    </div>
+            </div>
 </body>
 </html>

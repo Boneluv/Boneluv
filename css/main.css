@@ -8579,7 +8579,7 @@ input[type=range].green::-webkit-slider-thumb {
  display:block;
  width:100%;
  box-sizing:border-box;
- padding:0 0 55px;
+ padding-bottom: 60px;
  background-color:#f9fafe;
  transform:rotateY(0deg);
  transition:transform .4s ease .5s;

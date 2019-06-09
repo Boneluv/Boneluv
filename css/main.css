@@ -8594,7 +8594,8 @@ input[type=range].green::-webkit-slider-thumb {
 .landing-footer .content .links {
  display:flex;
  justify-content:space-around;
- width:100%
+ width:100%;
+ margin-bottom: 20px;
 }
 .landing-footer .content .links ul li {
  display:block;

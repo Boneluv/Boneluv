@@ -4269,6 +4269,7 @@
 @font-face {
  font-family:Font Awesome\ 5 Brands;
  font-style:normal;
+ font-display: auto;
  font-weight:400;
  src:url(/assets/fontawesome/webfonts/fa-brands-400.eot);
  src:url(/assets/fontawesome/webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
@@ -4282,6 +4283,7 @@
 }
 @font-face {
  font-family:Font Awesome\ 5 Pro;
+ font-display: auto;
  font-style:normal;
  font-weight:300;
  src:url(/assets/fontawesome/webfonts/fa-light-300.eot);
@@ -4296,6 +4298,7 @@
 }
 @font-face {
  font-family:Font Awesome\ 5 Pro;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:url(/assets/fontawesome/webfonts/fa-regular-400.eot);
@@ -4314,6 +4317,7 @@
 }
 @font-face {
  font-family:Font Awesome\ 5 Pro;
+ font-display: auto;
  font-style:normal;
  font-weight:900;
  src:url(/assets/fontawesome/webfonts/fa-solid-900.eot);
@@ -4326,6 +4330,7 @@
 .fa,
 .fas {
  font-family:Font Awesome\ 5 Pro;
+ font-display: auto;
  font-weight:900
 }
 a,

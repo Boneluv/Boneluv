@@ -4455,12 +4455,14 @@ table {
  font-family:Poppins;
  font-style:normal;
  font-weight:400;
+ font-display: auto;
  src:local("Poppins Regular"),
  local("Poppins-Regular"),
  url(https://fonts.gstatic.com/s/poppins/v5/pxiEyp8kv8JHgFVrJJfedw.ttf) format("truetype")
 }
 @font-face {
  font-family:Poppins;
+ font-display: auto;
  font-style:normal;
  font-weight:500;
  src:local("Poppins Medium"),
@@ -4470,6 +4472,7 @@ table {
 @font-face {
  font-family:Poppins;
  font-style:normal;
+ font-display: auto;
  font-weight:600;
  src:local("Poppins SemiBold"),
  local("Poppins-SemiBold"),
@@ -4478,6 +4481,7 @@ table {
 @font-face {
  font-family:Poppins;
  font-style:normal;
+ font-display: auto;
  font-weight:700;
  src:local("Poppins Bold"),
  local("Poppins-Bold"),
@@ -4486,6 +4490,7 @@ table {
 @font-face {
  font-family:Lora;
  font-style:normal;
+ font-display: auto;
  font-weight:400;
  src:local("Lora Regular"),
  local("Lora-Regular"),
@@ -4494,6 +4499,7 @@ table {
 @font-face {
  font-family:Lora;
  font-style:normal;
+ font-display: auto;
  font-weight:700;
  src:local("Lora Bold"),
  local("Lora-Bold"),
@@ -4501,6 +4507,7 @@ table {
 }
 @font-face {
  font-family:Montserrat;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Montserrat Regular"),
@@ -4509,6 +4516,7 @@ table {
 }
 @font-face {
  font-family:Montserrat;
+ font-display: auto;
  font-style:normal;
  font-weight:500;
  src:local("Montserrat Medium"),
@@ -4517,6 +4525,7 @@ table {
 }
 @font-face {
  font-family:Montserrat;
+ font-display: auto;
  font-style:normal;
  font-weight:600;
  src:local("Montserrat SemiBold"),
@@ -4526,6 +4535,7 @@ table {
 @font-face {
  font-family:Montserrat;
  font-style:normal;
+ font-display: auto;
  font-weight:700;
  src:local("Montserrat Bold"),
  local("Montserrat-Bold"),
@@ -4533,6 +4543,7 @@ table {
 }
 @font-face {
  font-family:Montserrat;
+ font-display: auto;
  font-style:normal;
  font-weight:900;
  src:local("Montserrat Black"),
@@ -4541,6 +4552,7 @@ table {
 }
 @font-face {
  font-family:Playfair Display;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Playfair Display Regular"),
@@ -4549,6 +4561,7 @@ table {
 }
 @font-face {
  font-family:Playfair Display;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Playfair Display Bold"),
@@ -4557,6 +4570,7 @@ table {
 }
 @font-face {
  font-family:Playfair Display;
+ font-display: auto;
  font-style:normal;
  font-weight:900;
  src:local("Playfair Display Black"),
@@ -4565,6 +4579,7 @@ table {
 }
 @font-face {
  font-family:Space Mono;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Space Mono"),
@@ -4573,6 +4588,7 @@ table {
 }
 @font-face {
  font-family:Space Mono;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Space Mono Bold"),
@@ -4581,6 +4597,7 @@ table {
 }
 @font-face {
  font-family:ABeeZee;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("ABeeZee Regular"),
@@ -4589,6 +4606,7 @@ table {
 }
 @font-face {
  font-family:Roboto Slab;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Roboto Slab Regular"),
@@ -4597,6 +4615,7 @@ table {
 }
 @font-face {
  font-family:Roboto Slab;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Roboto Slab Bold"),
@@ -4605,6 +4624,7 @@ table {
 }
 @font-face {
  font-family:Archivo;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Archivo Regular"),
@@ -4613,6 +4633,7 @@ table {
 }
 @font-face {
  font-family:Archivo;
+ font-display: auto;
  font-style:normal;
  font-weight:500;
  src:local("Archivo Medium"),
@@ -4621,6 +4642,7 @@ table {
 }
 @font-face {
  font-family:Archivo;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Archivo Bold"),
@@ -4629,6 +4651,7 @@ table {
 }
 @font-face {
  font-family:Cardo;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Cardo"),
@@ -4637,6 +4660,7 @@ table {
 }
 @font-face {
  font-family:Cardo;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Cardo Bold"),
@@ -4645,6 +4669,7 @@ table {
 }
 @font-face {
  font-family:Exo\ 2;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Exo 2"),
@@ -4653,6 +4678,7 @@ table {
 }
 @font-face {
  font-family:Exo\ 2;
+ font-display: auto;
  font-style:normal;
  font-weight:500;
  src:local("Exo 2 Medium"),
@@ -4661,6 +4687,7 @@ table {
 }
 @font-face {
  font-family:Exo\ 2;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Exo 2 Bold"),
@@ -4669,6 +4696,7 @@ table {
 }
 @font-face {
  font-family:Frank Ruhl Libre;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Frank Ruhl Libre Regular"),
@@ -4677,6 +4705,7 @@ table {
 }
 @font-face {
  font-family:Karla;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Karla"),
@@ -4685,6 +4714,7 @@ table {
 }
 @font-face {
  font-family:Karla;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Karla Bold"),
@@ -4693,6 +4723,7 @@ table {
 }
 @font-face {
  font-family:Merriweather;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Merriweather Regular"),
@@ -4701,6 +4732,7 @@ table {
 }
 @font-face {
  font-family:Merriweather;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Merriweather Bold"),
@@ -4709,6 +4741,7 @@ table {
 }
 @font-face {
  font-family:Nunito;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Nunito Regular"),
@@ -4717,6 +4750,7 @@ table {
 }
 @font-face {
  font-family:Nunito;
+ font-display: auto;
  font-style:normal;
  font-weight:600;
  src:local("Nunito SemiBold"),
@@ -4725,6 +4759,7 @@ table {
 }
 @font-face {
  font-family:Nunito;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Nunito Bold"),
@@ -4733,6 +4768,7 @@ table {
 }
 @font-face {
  font-family:Nunito;
+ font-display: auto;
  font-style:normal;
  font-weight:800;
  src:local("Nunito ExtraBold"),
@@ -4742,6 +4778,7 @@ table {
 @font-face {
  font-family:Old Standard TT;
  font-style:normal;
+ font-display: auto;
  font-weight:400;
  src:local("Old Standard TT Regular"),
  local("OldStandardTT-Regular"),
@@ -4749,6 +4786,7 @@ table {
 }
 @font-face {
  font-family:Old Standard TT;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Old Standard TT Bold"),
@@ -4757,6 +4795,7 @@ table {
 }
 @font-face {
  font-family:Oxygen;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Oxygen Regular"),
@@ -4765,6 +4804,7 @@ table {
 }
 @font-face {
  font-family:Oxygen;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Oxygen Bold"),
@@ -4773,6 +4813,7 @@ table {
 }
 @font-face {
  font-family:Rubik;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Rubik"),
@@ -4781,6 +4822,7 @@ table {
 }
 @font-face {
  font-family:Rubik;
+ font-display: auto;
  font-style:normal;
  font-weight:500;
  src:local("Rubik Medium"),
@@ -4789,6 +4831,7 @@ table {
 }
 @font-face {
  font-family:Rubik;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Rubik Bold"),
@@ -4796,6 +4839,7 @@ table {
  url(https://fonts.gstatic.com/s/rubik/v7/iJWHBXyIfDnIV7F6iGmd8WU.ttf) format("truetype")
 }
 @font-face {
+    font-display: auto;
  font-family:Spectral;
  font-style:normal;
  font-weight:400;
@@ -4806,6 +4850,7 @@ table {
 @font-face {
  font-family:Spectral;
  font-style:normal;
+ font-display: auto;
  font-weight:600;
  src:local("Spectral SemiBold"),
  local("Spectral-SemiBold"),
@@ -4813,6 +4858,7 @@ table {
 }
 @font-face {
  font-family:Spectral;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Spectral Bold"),
@@ -4821,6 +4867,7 @@ table {
 }
 @font-face {
  font-family:Noto Sans;
+ font-display: auto;
  font-style:normal;
  font-weight:400;
  src:local("Noto Sans"),
@@ -4829,6 +4876,7 @@ table {
 }
 @font-face {
  font-family:Noto Sans;
+ font-display: auto;
  font-style:normal;
  font-weight:700;
  src:local("Noto Sans Bold"),

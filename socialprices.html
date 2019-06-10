@@ -9,12 +9,11 @@
     <link rel="shortcut icon" href="boneicono.png" type="image/png"/>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/4e63b47db0.js"></script>
-    <script src="https://checkout.stripe.com/checkout.js"></script>
     
     <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="6b7b6bb8-754f-49ab-9544-c4a97693dcf7";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
 </head>
 <body class="allwhite">
-        
+        <script src="https://js.stripe.com/v3"></script>
     <div class="animateview">
         <nav class="landing-nav">
             <div class="landing-nav-logo">
@@ -64,13 +63,12 @@
 <!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
 
 
-<div id="error-message"></div>
 
-
-                <button id="checkout-button-plan_FEJBLaULZOP9qj" role="link" class="btn noicon" ng-show="isSignedIn &amp;&amp; !userData.profile.type" type="submit">
+                <button id="checkout-button-sku_FEKzpds0GbQ8jO" role="link" class="btn noicon" ng-show="isSignedIn &amp;&amp; !userData.profile.type" type="submit">
                     <i class="fas fa-credit-card"></i>
                     <span>Contratar</span>
                 </button>
+                <div id="error-message"></div>
     
             
     
@@ -222,6 +220,33 @@
             </div>
         </footer> 
     </div>
-    
+    <script>
+            var stripe = Stripe('pk_live_g7EK1dg6LCVumSnBL6HFRxw600ux1d2UF0');
+          
+            var checkoutButton = document.getElementById('checkout-button-sku_FEKzpds0GbQ8jO');
+            checkoutButton.addEventListener('click', function () {
+              // When the customer clicks on the button, redirect
+              // them to Checkout.
+              stripe.redirectToCheckout({
+                items: [{plan: 'plan_FEJBqOyqnYOUjQ', quantity: 1}],
+          
+                // Do not rely on the redirect to the successUrl for fulfilling
+                // purchases, customers may not always reach the success_url after
+                // a successful payment.
+                // Instead use one of the strategies described in
+                // https://stripe.com/docs/payments/checkout/fulfillment
+                successUrl: 'https://boneluv.es/success',
+                cancelUrl: 'https://boneluv.es/canceled',
+              })
+              .then(function (result) {
+                if (result.error) {
+                  // If `redirectToCheckout` fails due to a browser or network
+                  // error, display the localized error message to your customer.
+                  var displayError = document.getElementById('error-message');
+                  displayError.textContent = result.error.message;
+                }
+              });
+            });
+          </script>
 </body>
 </html>

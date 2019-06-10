@@ -7,60 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- Load Stripe.js on your website. -->
-<script src="https://js.stripe.com/v3"></script>
-
-<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  id="checkout-button-plan_FEJBqOyqnYOUjQ"
-  role="link"
->
-  Checkout
-</button>
-
-<div id="error-message"></div>
-
-<script>
-  var stripe = Stripe('sk_test_YwBb2hUlcrBpbifJvXVAe0Hp00PyPPUGwv');
-
-  var checkoutButton = document.getElementById('checkout-button-plan_FEJBqOyqnYOUjQ');
-  checkoutButton.addEventListener('click', function () {
-    function onVisaCheckoutReady() {
-  V.init({
-    apikey: '{{VISA_CHECKOUT_ID}}',
-    paymentRequest:{
-      subtotal: '10.00',
-      currencyCode: 'USD'
-    },
-    settings: {
-      displayName: 'My Website'
-    }
-  });
-}
-
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{plan: 'plan_FEJBqOyqnYOUjQ', quantity: 1}],
-
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://boneluv.es/success',
-      cancelUrl: 'https://boneluv.es/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-</script>
+        <form action="/create_subscription.php" method="POST">
+            <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="pk_test_qKWZd9eBw0qkxh5c6wBH0dCv001uAGcooh"
+              data-image="/images/marketplace.png"
+              data-name="Emma's Farm CSA"
+              data-description="Subscription for 1 weekly box"
+              data-amount="2000"
+              data-label="Sign Me Up!">
+            </script>
+          </form>
 </body>
 </html>

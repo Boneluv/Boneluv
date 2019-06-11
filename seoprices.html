@@ -12,6 +12,7 @@
     <script type="text/javascript"> window.$crisp=[];window.CRISP_WEBSITE_ID="6b7b6bb8-754f-49ab-9544-c4a97693dcf7";(function(){ d=document;s=d.createElement("script"); s.src="https://client.crisp.chat/l.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})(); </script>
 </head>
 <body class="allwhite">
+        <script src="https://js.stripe.com/v3"></script>
     <div class="animateview">
         <nav class="landing-nav">
             <div class="landing-nav-logo">
@@ -54,34 +55,12 @@
                 100 <span>€/mes</span>
             </div>
     
-            <small>Web básica</small>
-    
-            <!-- Already upgraded -->
-            <!-- ngIf: userData.profile.type -->
-    
-            <!-- Upgrade Button -->
-            <!-- <button class="btn noicon" ng-show="isSignedIn && !userData.profile.type" ng-click="triggerPlasso()">
-                <i class="far fa-credit-card"></i>
-                <span>Upgrade Now</span>
-            </button> -->
-    
-            <!-- PayPal -->
-            <form id="paypalCheckout" action="https://www.paypal.com/cgi-bin/webscr" ng-show="isSignedIn &amp;&amp; !userData.profile.type" method="post" target="_top" class="ng-pristine ng-valid">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="THFU52J7Q99RJ">
-                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0">
-                <button class="btn noicon" ng-show="isSignedIn &amp;&amp; !userData.profile.type" type="submit">
+            <button id="seolocal" role="link" class="btn noicon">
                     <i class="fas fa-credit-card"></i>
                     <span>Contratar</span>
-                </button>
-    
-            </form>
-    
-            <!-- Create Account -->
-            <!-- ngIf: !isSignedIn -->
-            <!-- ngIf: !isSignedIn -->
-    
-    
+            </button>
+            <div id="error-message1"></div>
+
             <ul>
                 <li>Optimización SEO</li>
                 <li>Posicionamiento local</li>
@@ -97,31 +76,11 @@
     
             <small>Web corporativa</small>
     
-            <!-- Already upgraded -->
-            <!-- ngIf: userData.profile.type -->
-    
-            <!-- Upgrade Button -->
-            <!-- <button class="btn noicon" ng-show="isSignedIn && !userData.profile.type" ng-click="triggerPlasso()">
-                <i class="far fa-credit-card"></i>
-                <span>Upgrade Now</span>
-            </button> -->
-    
-            <!-- PayPal -->
-            <form id="paypalCheckout" action="https://www.paypal.com/cgi-bin/webscr" ng-show="isSignedIn &amp;&amp; !userData.profile.type" method="post" target="_top" class="ng-pristine ng-valid">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="THFU52J7Q99RJ">
-                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0">
-                <button class="btn noicon" ng-show="isSignedIn &amp;&amp; !userData.profile.type" type="submit">
+            <button id="seoempresa" role="link" class="btn noicon">
                     <i class="fas fa-credit-card"></i>
                     <span>Contratar</span>
-                </button>
-    
-            </form>
-    
-            <!-- Create Account -->
-            <!-- ngIf: !isSignedIn -->
-            <!-- ngIf: !isSignedIn -->
-    
+            </button>
+            <div id="error-message2"></div>
     
             <ul>
                 <li>Optimización SEO</li>
@@ -138,31 +97,11 @@
     
             <small>Tienda online</small>
     
-            <!-- Already upgraded -->
-            <!-- ngIf: userData.profile.type -->
-    
-            <!-- Upgrade Button -->
-            <!-- <button class="btn noicon" ng-show="isSignedIn && !userData.profile.type" ng-click="triggerPlasso()">
-                <i class="far fa-credit-card"></i>
-                <span>Upgrade Now</span>
-            </button> -->
-    
-            <!-- PayPal -->
-            <form id="paypalCheckout" action="https://www.paypal.com/cgi-bin/webscr" ng-show="isSignedIn &amp;&amp; !userData.profile.type" method="post" target="_top" class="ng-pristine ng-valid">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="THFU52J7Q99RJ">
-                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0">
-                <button class="btn noicon" ng-show="isSignedIn &amp;&amp; !userData.profile.type" type="submit">
+            <button id="seoecommerce" role="link" class="btn noicon">
                     <i class="fas fa-credit-card"></i>
                     <span>Contratar</span>
-                </button>
-    
-            </form>
-    
-            <!-- Create Account -->
-            <!-- ngIf: !isSignedIn -->
-            <!-- ngIf: !isSignedIn -->
-    
+            </button>
+            <div id="error-message3"></div> 
     
             <ul>
                 <li>Optimización SEO para productos</li>
@@ -211,5 +150,83 @@
             </div>
         </footer> 
     </div>
+    <script>
+            var stripe = Stripe('pk_live_g7EK1dg6LCVumSnBL6HFRxw600ux1d2UF0');
+
+            var checkoutButton1 = document.getElementById('seolocal');
+                        checkoutButton1.addEventListener('click', function () {
+                          // When the customer clicks on the button, redirect
+                          // them to Checkout.
+                          stripe.redirectToCheckout({
+                            items: [{plan: 'plan_FEJ72BiNCO8jFx', quantity: 1}],
+                      
+                            // Do not rely on the redirect to the successUrl for fulfilling
+                            // purchases, customers may not always reach the success_url after
+                            // a successful payment.
+                            // Instead use one of the strategies described in
+                            // https://stripe.com/docs/payments/checkout/fulfillment
+                            successUrl: 'https://boneluv.es/success',
+                            cancelUrl: 'https://boneluv.es/canceled',
+                          })
+                          .then(function (result) {
+                            if (result.error) {
+                              // If `redirectToCheckout` fails due to a browser or network
+                              // error, display the localized error message to your customer.
+                              var displayError = document.getElementById('error-message1');
+                              displayError.textContent = result.error.message;
+                            }
+                          });
+                        });
+          
+            var checkoutButton2 = document.getElementById('seoempresa');
+            checkoutButton2.addEventListener('click', function () {
+              // When the customer clicks on the button, redirect
+              // them to Checkout.
+              stripe.redirectToCheckout({
+                items: [{plan: 'plan_FEJ7Ob4sKliC7t', quantity: 1}],
+          
+                // Do not rely on the redirect to the successUrl for fulfilling
+                // purchases, customers may not always reach the success_url after
+                // a successful payment.
+                // Instead use one of the strategies described in
+                // https://stripe.com/docs/payments/checkout/fulfillment
+                successUrl: 'https://boneluv.es/success',
+                cancelUrl: 'https://boneluv.es/canceled',
+              })
+              .then(function (result) {
+                if (result.error) {
+                  // If `redirectToCheckout` fails due to a browser or network
+                  // error, display the localized error message to your customer.
+                  var displayError = document.getElementById('error-message2');
+                  displayError.textContent = result.error.message;
+                }
+              });
+            });
+
+            var checkoutButton3 = document.getElementById('seoecommerce');
+                          checkoutButton3.addEventListener('click', function () {
+                            // When the customer clicks on the button, redirect
+                            // them to Checkout.
+                            stripe.redirectToCheckout({
+                              items: [{plan: 'plan_FEJ70wgadv1H8j', quantity: 1}],
+                        
+                              // Do not rely on the redirect to the successUrl for fulfilling
+                              // purchases, customers may not always reach the success_url after
+                              // a successful payment.
+                              // Instead use one of the strategies described in
+                              // https://stripe.com/docs/payments/checkout/fulfillment
+                              successUrl: 'https://boneluv.es/success',
+                              cancelUrl: 'https://boneluv.es/canceled',
+                            })
+                            .then(function (result) {
+                              if (result.error) {
+                                // If `redirectToCheckout` fails due to a browser or network
+                                // error, display the localized error message to your customer.
+                                var displayError = document.getElementById('error-message3');
+                                displayError.textContent = result.error.message;
+                              }
+                            });
+                          });
+          </script>
 </body>
 </html>

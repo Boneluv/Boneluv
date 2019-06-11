@@ -125,10 +125,7 @@
                 <i class="fab fa-facebook-square"></i>    
                 <i class="fab fa-instagram"></i>
             </small>
-                <button class="btn noicon" ng-show="isSignedIn &amp;&amp; !userData.profile.type" type="submit">
-                    <i class="fas fa-credit-card"></i>
-                    <span>Contratar</span>
-                </button>
+    
                 <button id="influencia" role="link" class="btn noicon">
                         <i class="fas fa-credit-card"></i>
                     <span>Contratar</span>
@@ -190,30 +187,39 @@
                     <i class="fab fa-linkedin"></i>
             </small>
     
-            <!-- Already upgraded -->
-            <!-- ngIf: userData.profile.type -->
-    
-            <!-- Upgrade Button -->
-            <!-- <button class="btn noicon" ng-show="isSignedIn && !userData.profile.type" ng-click="triggerPlasso()">
-                <i class="far fa-credit-card"></i>
-                <span>Upgrade Now</span>
-            </button> -->
-    
-            <!-- PayPal -->
-            <form id="paypalCheckout" action="https://www.paypal.com/cgi-bin/webscr" ng-show="isSignedIn &amp;&amp; !userData.profile.type" method="post" target="_top" class="ng-pristine ng-valid">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="THFU52J7Q99RJ">
-                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" border="0">
-                <button class="btn noicon" ng-show="isSignedIn &amp;&amp; !userData.profile.type" type="submit">
+            <button id="marca" role="link" class="btn noicon">
                     <i class="fas fa-credit-card"></i>
-                    <span>Contratar</span>
-                </button>
-    
-            </form>
-    
-            <!-- Create Account -->
-            <!-- ngIf: !isSignedIn -->
-            <!-- ngIf: !isSignedIn -->
+                <span>Contratar</span>
+                  </button>
+                  <div id="error-message"></div>
+                  <script>
+                          var stripe = Stripe('pk_live_g7EK1dg6LCVumSnBL6HFRxw600ux1d2UF0');
+                        
+                          var checkoutButton = document.getElementById('marca');
+                          checkoutButton.addEventListener('click', function () {
+                            // When the customer clicks on the button, redirect
+                            // them to Checkout.
+                            stripe.redirectToCheckout({
+                              items: [{plan: 'plan_FEJBqOyqnYOUjQ', quantity: 1}],
+                        
+                              // Do not rely on the redirect to the successUrl for fulfilling
+                              // purchases, customers may not always reach the success_url after
+                              // a successful payment.
+                              // Instead use one of the strategies described in
+                              // https://stripe.com/docs/payments/checkout/fulfillment
+                              successUrl: 'https://boneluv.es/success',
+                              cancelUrl: 'https://boneluv.es/canceled',
+                            })
+                            .then(function (result) {
+                              if (result.error) {
+                                // If `redirectToCheckout` fails due to a browser or network
+                                // error, display the localized error message to your customer.
+                                var displayError = document.getElementById('error-message');
+                                displayError.textContent = result.error.message;
+                              }
+                            });
+                          });
+                        </script>
     
     
             <ul>
